@@ -44,3 +44,9 @@ coverage/
 *.orig
 *.bak
 *.tmp
+
+node_modules/
+.env
+dist/
+build/
+.DS_Store
