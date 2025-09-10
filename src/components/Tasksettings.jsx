@@ -13,7 +13,7 @@ import accountSettingIcon from '../assets/setting-07.png';
 import listSettingIcon from '../assets/list-setting.png';
 import secondSettingsIcon from '../assets/secondsettings.png';
 import databaseIcon from '../assets/database-02.png';
-import faqIcon from '../assets/faq.png';
+import faqIcon from '../assets/FAQ.png';
 import searchIcon from '../assets/search.png';
 import dataAnalysisImage from '../assets/dataanalysis.png';
 import malhubImage from '../assets/malhub.png';

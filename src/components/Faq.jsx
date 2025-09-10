@@ -12,7 +12,7 @@ import accountSetting from '../assets/setting-07.png';
 import listSetting from '../assets/list-setting.png';
 import apiWhite from '../assets/database-02.png';
 import database02 from '../assets/database-02.png';
-import faq from '../assets/faq.png';
+import faq from '../assets/FAQ.png';
 
 export default function Faq() {
   const navigate = useNavigate();
