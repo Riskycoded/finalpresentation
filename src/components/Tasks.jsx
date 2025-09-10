@@ -17,7 +17,7 @@ import vectorIcon from "../assets/Vector.png";
 import searchIcon from "../assets/search.png";
 import plussyIcon from "../assets/plussy.png";
 import contentWritingImage from "../assets/contentwriting.png";
-import studentImage from "../assets/student.png";
+import studentImage from "../assets/Student.png";
 import menuBarImage from "../assets/menubarr.png";
 import dataAnalysisImage from "../assets/dataanalysis.png";
 import makaImage from "../assets/maka.png";
