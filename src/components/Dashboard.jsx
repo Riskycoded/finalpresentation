@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Notification from './Notification'; // Import your Notification component
-import Popupprofile from './Popupprofile'; // Import the ProfileDropdown component
+import Popupprofile from './popupprofile'; // Import the ProfileDropdown component
 
 export default function Dashboard() {
     const navigate = useNavigate();

@@ -7,12 +7,12 @@ import Teams from './components/Teams'
 import Calendar from './components/Calendar'
 import Settings from './components/settings'
 import Tasksettings from './components/Tasksettings'
-import Api from './components/api'
+import Api from './components/Api'
 import Aboutus from './components/Aboutus'
 import Faq from './components/Faq'
 import Signout from './components/signout'
 import Plusadd from './components/Plusadd'
-import Notification from './components/notification'
+import Notification from './components/Notification'
 
 function App() {
   return (
