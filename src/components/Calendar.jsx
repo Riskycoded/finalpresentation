@@ -1,6 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+// Import all images from assets folder
+import logoImage from '../assets/logo.png';
+import whiteHome from '../assets/whitehome.png';
+import tdesignTask from '../assets/tdesign_task.png';
+import formkitPeople from '../assets/formkit_people.png';
+import simplelineicons from '../assets/simple-line-icons_calender.png';
+import settings07 from '../assets/setting-07.png';
+import lineMdLogout from '../assets/line-md_logout.png';
+import ellipse from '../assets/Ellipse.png';
+import calendarIcon from '../assets/calendar_.png';
+import arrowLeft from '../assets/arrow-left.png';
+import arrowRight from '../assets/arrow-right.png';
+import addCircle from '../assets/add-circle.png';
+import outOfOffice from '../assets/outofoffice.png';
+import ppux from '../assets/ppux.png';
+import checkGreen from '../assets/checkgreen.png';
+import cancelRed from '../assets/cancelred.png';
+import notification1 from '../assets/Notification 1.png';
+import yellowStuff from '../assets/yellowstuff.png';
+import emojil from '../assets/emojil.png';
+
 export default function Calendar() {
     const navigate = useNavigate();
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -14,7 +35,7 @@ export default function Calendar() {
             endDate: new Date(2025, 4, 23, 16, 30),
             type: "team",
             participants: ["Chris Morich", "Melanie Chu", "Charmie"],
-            icon: "/images/ppux.png",
+            icon: ppux,
             confirmed: false
         }
     ]);
@@ -99,38 +120,38 @@ export default function Calendar() {
             {/* Sidebar */}
             <div className="bg-[#EFEFEF] w-[246px] px-6 min-h-screen opacity-100 rounded-tr-[24px] rounded-br-[24px] fixed top-0 left-0">
                 <div  className="w-[109px] h-[114px]">
-                    <img src="/images/logo.png" alt="" className="w-[109px] mt-[3px] ml-[2px] h-[114px]"/>
+                    <img src={logoImage} alt="" className="w-[109px] mt-[3px] ml-[2px] h-[114px]"/>
                     <h1 className="w-[76px] h-[26px] text-[20px] font-[jaini]">CheckMate</h1>
                 </div>
                     
                 <div className="gap-[5px] mt-[30px]">
                     <div onClick={() => handleNavigation('dashboard')} className="flex gap-[10px]  pl-[31px] pt-[13px] pr-[31px] pb-[13px]">
-                        <img src="/images/whitehome.png" alt="" />
+                        <img src={whiteHome} alt="" />
                         <h1 className=" text-[#666666] text-[20px] font-semibold text-center">Dashboard</h1>
                     </div>
 
                     <div onClick={() => handleNavigation('tasks')} className="flex gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px]">
-                        <img src="/images/tdesign_task.png" alt="" />
+                        <img src={tdesignTask} alt="" />
                         <h1 className="font-semibold text-[18px] text-[#666666]">Tasks Board</h1>
                     </div>
 
                     <div onClick={() => handleNavigation('teams')} className="flex gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px]">
-                        <img src="/images/formkit_people.png" alt="" />
+                        <img src={formkitPeople} alt="" />
                         <h1 className="font-semibold text-[18px] text-[#666666]">Teams</h1>
                     </div>
                 
                     <div  className="flex gap-[10px] pl-[31px] shadow-[0px_4px_4px_0px_#00000060] rounded-[10px] bg-black border-[1.5px] w-[195px] h-[53px] pt-[13px] pr-[31px] pb-[13px]">
-                        <img src="/images/simple-line-icons_calender.png" alt="" className=""/>
+                        <img src={simplelineicons} alt="" className=""/>
                         <h1 className="font-semibold text-[18px] text-white">Calendar</h1>
                     </div>
                 
                     <div onClick={() => handleNavigation('settings')} className="flex gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px]">
-                        <img src="/images/setting-07.png" alt="" />
+                        <img src={settings07} alt="" />
                         <h1 className="font-semibold text-[18px] text-[#666666]">Settings</h1>
                     </div>
 
-                    <div onClick={() => handleNavigation('login')} className="flex bg-[url('/images/Ellipse.png')] gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] mt-[30px]">
-                        <img src="/images/line-md_logout.png" alt="" />
+                    <div onClick={() => handleNavigation('login')} className={`flex gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] mt-[30px]`} style={{backgroundImage: `url(${ellipse})`}}>
+                        <img src={lineMdLogout} alt="" />
                         <h1>Log Out</h1>
                     </div>
                 </div>
@@ -142,7 +163,7 @@ export default function Calendar() {
                 <div className="flex-1">
                     <div className="flex justify-between items-center w-full mb-8">
                         <div className="flex items-center gap-[19px]">
-                            <img src="/images/calendar_.png" alt="" className="w-[72px] h-[73px]"/>
+                            <img src={calendarIcon} alt="" className="w-[72px] h-[73px]"/>
                             <h1 className="font-semibold text-[60px]">Calendar</h1>
                         </div> 
                     </div>
@@ -161,13 +182,13 @@ export default function Calendar() {
                                 onClick={handlePrevMonth}
                                 className="hover:bg-gray-100 p-2 rounded-full"
                             >
-                                <img src="/images/arrow-left.png" alt="Previous" className="w-6 h-6" />
+                                <img src={arrowLeft} alt="Previous" className="w-6 h-6" />
                             </button>
                             <button 
                                 onClick={handleNextMonth}
                                 className="hover:bg-gray-100 p-2 rounded-full"
                             >
-                                <img src="/images/arrow-right.png" alt="Next" className="w-6 h-6" />
+                                <img src={arrowRight} alt="Next" className="w-6 h-6" />
                             </button>
                         </div>
                     </div>
@@ -244,7 +265,7 @@ export default function Calendar() {
                     onClick={() => setShowEventModal(true)}
                     className="fixed bottom-8 right-8 bg-black text-white rounded-full p-4 shadow-lg hover:bg-gray-800 transition-colors"
                 >
-                    <img src="/images/add-circle.png" alt="Add Event" className="w-6 h-6" />
+                    <img src={addCircle} alt="Add Event" className="w-6 h-6" />
                 </button>
 
                 <div className="gap-[18px] pt-10">
@@ -257,7 +278,7 @@ export default function Calendar() {
                     <div>
                         <div className="flex justify-between pr-[10px]">
                             <p>2:00 PM</p>
-                            <img src="/images/outofoffice.png" alt=""  className="pb-[5px]"/>
+                            <img src={outOfOffice} alt=""  className="pb-[5px]"/>
                         </div>
                         <hr className="border-dotted border-t-4"/>
                     </div>
@@ -276,7 +297,7 @@ export default function Calendar() {
                         <div className=" bg-[#BFBFBF] w-[709px] h-[115px] flex flex-row justify-between rounded-[22px]">
                             <div className="w-316px h-[70px] p-[20px] gap-[15px] flex">
                                 <div>
-                                    <img src="/images/ppux.png" alt="" />
+                                    <img src={ppux} alt="" />
                                 </div>
 
                                 <div className="">
@@ -298,11 +319,11 @@ export default function Calendar() {
                                     </div>
                                     <div className="flex justify-between gap-10 pt-3">
     <button className="text-green-600 flex items-center gap-2">
-        <img src="/images/checkgreen.png" alt="" />
+        <img src={checkGreen} alt="" />
         <span>Confirm</span>
     </button>
     <button className="text-red-600 flex items-center gap-2">
-        <img src="/images/cancelred.png" alt="" />
+        <img src={cancelRed} alt="" />
         <span>Cancel</span>
     </button>
 </div>
@@ -312,7 +333,7 @@ export default function Calendar() {
                             </div>
 
                             <div className="items-center">
-                                <img src="/images/Notification 1.png" alt="" className=" w-[30px] h-[30px]"/>
+                                <img src={notification1} alt="" className=" w-[30px] h-[30px]"/>
                             </div>
 
                         </div>
@@ -334,7 +355,7 @@ export default function Calendar() {
         {/* Pie Chart */}
         <div className="relative w-32 h-32 mx-auto mb-4">
             <div className="w-32 h-32 rounded-full">
-                <img src="/images/yellowstuff.png" alt="" />
+                <img src={yellowStuff} alt="" />
             </div>
         </div>
     </div>
@@ -362,7 +383,7 @@ export default function Calendar() {
         <div className="p-4 bg-gray-50">
             <div className="flex gap-4">
                 <div className="relative">
-                    <img src="/images/emojil.png" alt="" className="rounded-full bg-gray-300" />
+                    <img src={emojil} alt="" className="rounded-full bg-gray-300" />
                     
                 </div>
                 <div className="flex-1">
@@ -377,7 +398,7 @@ export default function Calendar() {
         <div className="p-4 bg-white">
             <div className="flex gap-4">
                 <div className="relative">
-                    <img src="/images/emojil.png" alt="" className=" rounded-full bg-gray-300" />
+                    <img src={emojil} alt="" className=" rounded-full bg-gray-300" />
                     
                 </div>
                 <div className="flex-1">
@@ -392,7 +413,7 @@ export default function Calendar() {
         <div className="p-4 bg-white rounded-lg">
             <div className="flex gap-4">
                 <div className="relative">
-                    <img src="/images/emojil.png" alt="" className="rounded-full bg-gray-300" />
+                    <img src={emojil} alt="" className="rounded-full bg-gray-300" />
                     
                 </div>
                 <div className="flex-1">

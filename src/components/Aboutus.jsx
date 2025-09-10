@@ -1,5 +1,18 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import logoImage from '../assets/logo.png'
+import whiteHome from '../assets/whitehome.png'
+import tdesigntask from '../assets/tdesign_task.png'
+import formkitPeople from '../assets/formkit_people.png'
+import simplelineicons from '../assets/simple-line-icons_calender.png'
+import settings07 from '../assets/setting-07.png'
+import lineback from '../assets/lineback.png'
+import ciSettings from '../assets/ci_settings.png'
+import secondSettings from '../assets/secondsettings.png'
+import listSettings from '../assets/list-setting.png'
+import Set07 from '../assets/setting-07.png'
+import faQ from '../assets/faq.png'
+import databaseWhite from '../assets/databasewhite.png'
 
 export default function Aboutus(){
     const navigate = useNavigate();
@@ -29,7 +42,7 @@ export default function Aboutus(){
                         className="w-[62px] h-[62px] pt-[3px] pl-[7px] cursor-pointer"
                         onClick={() => handleMainNavigation('/dashboard')}
                     >
-                        <img src="/images/logo.png" alt="Logo" />
+                        <img src={logoImage} alt="Logo" />
                     </div>
                     
                     <div className="flex flex-col gap-[5px] pt-[50px] pl-[17px]">
@@ -39,7 +52,7 @@ export default function Aboutus(){
                             }`}
                             onClick={() => handleMainNavigation('/dashboard')}
                         >
-                            <img src="/images/whitehome.png" alt="Dashboard" />
+                            <img src={whiteHome} alt="Dashboard" />
                         </div>
                         
                         <div 
@@ -48,7 +61,7 @@ export default function Aboutus(){
                             }`}
                             onClick={() => handleMainNavigation('/tasks')}
                         >
-                            <img src="/images/tdesign_task.png" alt="Tasks" />
+                            <img src={tdesigntask} alt="Tasks" />
                         </div>
                         
                         <div 
@@ -57,7 +70,7 @@ export default function Aboutus(){
                             }`}
                             onClick={() => handleMainNavigation('/teams')}
                         >
-                            <img src="/images/formkit_people.png" alt="Teams" />
+                            <img src={formkitPeople} alt="Teams" />
                         </div>
                         
                         <div 
@@ -66,7 +79,7 @@ export default function Aboutus(){
                             }`}
                             onClick={() => handleMainNavigation('/calendar')}
                         >
-                            <img src="/images/simple-line-icons_calender.png" alt="Calendar" />
+                            <img src={simplelineicons} alt="Calendar" />
                         </div>
                         
                         <div 
@@ -75,7 +88,7 @@ export default function Aboutus(){
                             }`}
                             onClick={() => handleMainNavigation('/settings')}
                         >
-                            <img src="/images/setting-07.png" alt="Settings" />
+                            <img src={settings07} alt="Settings" />
                         </div>
                     </div>
                     
@@ -83,7 +96,7 @@ export default function Aboutus(){
                         className="mt-[100px] w-[89px] h-[53px] items-center pl-[31px] cursor-pointer hover:bg-gray-200 rounded-[10px]"
                         onClick={() => handleMainNavigation('/signout')}
                     >
-                        <div><img src="/images/lineback.png" alt="Sign Out" /></div>
+                        <div><img src={lineback} alt="Sign Out" /></div>
                     </div>
                 </div> 
 
@@ -91,7 +104,7 @@ export default function Aboutus(){
                 <div className="w-[299px] h-full bg-[#EFEFEF] shadow-sm overflow-y-auto">
                     <div className="p-6">
                         <div className="flex items-center gap-3 mb-8">
-                            <img src="/images/ci_settings.png" alt="Settings Icon" className="w-[53px] h-[50px]"/>
+                            <img src={ciSettings} alt="Settings Icon" className="w-[53px] h-[50px]"/>
                             <h1 className="text-[48px] font-semibold text-[#4D4A4A]">Settings</h1>
                         </div>
 
@@ -102,7 +115,7 @@ export default function Aboutus(){
                                 }`}
                                 onClick={() => handleSettingsNavigation('/settings')}
                             >
-                                <div><img src="/images/secondsettings.png" alt="Edit Account" /></div>
+                                <div><img src={secondSettings} alt="Edit Account" /></div>
                                 <span className="text-sm font-semibold">Edit Account</span>
                             </div>
                             
@@ -112,7 +125,7 @@ export default function Aboutus(){
                                 }`}
                                 onClick={() => handleSettingsNavigation('/settings/tasks')}
                             >
-                                <div className="w-[20px] h-[20px]"><img src="/images/list-setting.png" alt="Tasks" /></div>
+                                <div className="w-[20px] h-[20px]"><img src={listSettings} alt="Tasks" /></div>
                                 <span className="text-sm">Tasks</span>
                             </div>
                             
@@ -122,14 +135,14 @@ export default function Aboutus(){
                                 }`}
                                 onClick={() => handleSettingsNavigation('/settings/api')}
                             >
-                                <div className="w-[20px] h-[20px]"><img src="/images/setting-07.png" alt="API" /></div>
+                                <div className="w-[20px] h-[20px]"><img src={Set07} alt="API" /></div>
                                 <span className="text-sm">API</span>
                             </div>
                             
                             <div 
                                 className="flex items-center gap-[10px] w-[136px] h-[41px] bg-black rounded-[5px] text-white p-[10px] rounded-lg"
                             >
-                                <div className="w-[20px] h-[20px]"><img src="/images/databasewhite.png" alt="About Us" /></div>
+                                <div className="w-[20px] h-[20px]"><img src={databaseWhite} alt="About Us" /></div>
                                 <span className="text-sm">About Us</span>
                             </div>
                             
@@ -139,7 +152,7 @@ export default function Aboutus(){
                                 }`}
                                 onClick={() => handleSettingsNavigation('/settings/faqs')}
                             >
-                                <div className="w-[20px] h-[20px]"><img src="/images/faq.png" alt="FAQs" /></div>
+                                <div className="w-[20px] h-[20px]"><img src={faQ} alt="FAQs" /></div>
                                 <span className="text-sm">FAQs</span>
                             </div>
                         </div>

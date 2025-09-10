@@ -1,5 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import logoImage from '../assets/logo.png';
+import whiteHome from '../assets/whitehome.png';
+import tdesignTask from '../assets/tdesign_task.png';
+import formkitPeople from '../assets/formkit_people.png';
+import simplelineicons from '../assets/simple-line-icons_calender.png';
+import settings07 from '../assets/setting-07.png';
+import linebackIcon from '../assets/lineback.png';
+import ciSettingsIcon from '../assets/ci_settings.png';
+import accountSettingIcon from '../assets/account-setting-02.png';
+import listSettingIcon from '../assets/list-setting.png';
+import secondSettingsIcon from '../assets/secondsettings.png';
+import databaseIcon from '../assets/database-02.png';
+import faqIcon from '../assets/faq.png';
+import searchIcon from '../assets/search.png';
+import blackboyImage from '../assets/blackboy.png';
 
 export default function Settings() {
     const navigate = useNavigate();
@@ -28,7 +43,7 @@ export default function Settings() {
                     className="w-[62px] h-[62px] pt-[3px] pl-[7px] cursor-pointer"
                     onClick={() => handleNavigation('dashboard')}
                 >
-                    <img src="/images/logo.png" alt="Logo" />
+                    <img src={logoImage} alt="Logo" />
                 </div>
                 
                 <div className="flex flex-col gap-[5px] pt-[50px] pl-[17px]">
@@ -38,7 +53,7 @@ export default function Settings() {
                             isActiveRoute('/dashboard') ? 'bg-black' : 'hover:bg-gray-200'
                         }`}
                     >
-                        <img src="/images/whitehome.png" alt="Home" />
+                        <img src={whiteHome} alt="Dashboard" />
                     </div>
                     <div 
                         onClick={() => handleNavigation('tasks')} 
@@ -46,7 +61,7 @@ export default function Settings() {
                             isActiveRoute('/tasks') ? 'bg-black' : 'hover:bg-gray-200'
                         }`}
                     >
-                        <img src="/images/tdesign_task.png" alt="Tasks" />
+                        <img src={tdesignTask} alt="Tasks" />
                     </div>
                     <div 
                         onClick={() => handleNavigation('teams')} 
@@ -54,7 +69,7 @@ export default function Settings() {
                             isActiveRoute('/teams') ? 'bg-black' : 'hover:bg-gray-200'
                         }`}
                     >
-                        <img src="/images/formkit_people.png" alt="People" />
+                        <img src={formkitPeople} alt="Teams" />
                     </div>
                     <div 
                         onClick={() => handleNavigation('calendar')} 
@@ -62,11 +77,11 @@ export default function Settings() {
                             isActiveRoute('/calendar') ? 'bg-black' : 'hover:bg-gray-200'
                         }`}
                     >
-                        <img src="/images/simple-line-icons_calender.png" alt="Calendar" />
+                        <img src={simplelineicons} alt="Calendar" />
                     </div>
                     {/* Current page - Settings (highlighted) */}
                     <div className="w-[89px] pr-[31px] pl-[31px] bg-black h-[53px] pt-[13px] pb-[13px] rounded-[10px] border-[1.5px]">
-                        <img src="/images/setting-07.png" alt="Settings" />
+                        <img src={settings07} alt="Settings" />
                     </div>
                 </div>
                 
@@ -75,7 +90,7 @@ export default function Settings() {
                         onClick={() => handleNavigation('signout')} 
                         className="cursor-pointer hover:bg-gray-200 rounded-lg p-2 transition-colors"
                     >
-                        <img src="/images/lineback.png" alt="Back" />
+                        <img src={linebackIcon} alt="Sign Out" />
                     </div>
                 </div>
             </div> 
@@ -84,7 +99,7 @@ export default function Settings() {
             <div className="w-[299px] h-full bg-[#EFEFEF] shadow-sm overflow-y-auto">
                 <div className="p-6">
                     <div className="flex items-center gap-3 mb-8">
-                        <img src="/images/ci_settings.png" alt="Settings Icon" className="w-[53px] h-[50px]"/>
+                        <img src={ciSettingsIcon} alt="Settings Icon" className="w-[53px] h-[50px]"/>
                         <h1 className="text-[48px] font-semibold text-[#4D4A4A]">Settings</h1>
                     </div>
 
@@ -93,7 +108,7 @@ export default function Settings() {
                         <div className={`flex items-center gap-[10px] rounded-[5px] p-[10px] w-[169px] rounded-lg cursor-pointer ${
                             isActiveRoute('/settings') ? 'bg-black text-white' : 'bg-black text-white'
                         }`}>
-                            <div><img src="/images/account-setting-02.png" alt="Account" /></div>
+                            <div><img src={accountSettingIcon} alt="Edit Account" /></div>
                             <span className="text-[20px] font-semibold">Edit Account</span>
                         </div>
                         
@@ -104,7 +119,7 @@ export default function Settings() {
                                 isActiveRoute('/settings/tasks') ? 'bg-black text-white' : 'text-[#585858] hover:bg-gray-100'
                             }`}
                         >
-                            <div className="w-[20px] h-[20px]"><img src="/images/list-setting.png" alt="Tasks" /></div>
+                            <div className="w-[20px] h-[20px]"><img src={listSettingIcon} alt="Tasks Settings" /></div>
                             <span className="text-sm">Tasks</span>
                         </div>
                         
@@ -115,7 +130,7 @@ export default function Settings() {
                                 isActiveRoute('/settings/api') ? 'bg-black text-white' : 'text-[#585858] hover:bg-gray-100'
                             }`}
                         >
-                            <div className="w-[20px] h-[20px]"><img src="/images/secondsettings.png" alt="API" /></div>
+                            <div className="w-[20px] h-[20px]"><img src={secondSettingsIcon} alt="API Settings" /></div>
                             <span className="text-sm">API</span>
                         </div>
                         
@@ -126,7 +141,7 @@ export default function Settings() {
                                 isActiveRoute('/settings/about') ? 'bg-black text-white' : 'text-[#585858] hover:bg-gray-100'
                             }`}
                         >
-                            <div className="w-[20px] h-[20px]"><img src="/images/database-02.png" alt="About" /></div>
+                            <div className="w-[20px] h-[20px]"><img src={databaseIcon} alt="About Us" /></div>
                             <span className="text-sm">About Us</span>
                         </div>
                         
@@ -137,7 +152,7 @@ export default function Settings() {
                                 isActiveRoute('/settings/faqs') ? 'bg-black text-white' : 'text-[#585858] hover:bg-gray-100'
                             }`}
                         >
-                            <div className="w-[20px] h-[20px]"><img src="/images/faq.png" alt="FAQs" /></div>
+                            <div className="w-[20px] h-[20px]"><img src={faqIcon} alt="FAQs" /></div>
                             <span className="text-sm">FAQs</span>
                         </div>
                     </div>
@@ -148,7 +163,7 @@ export default function Settings() {
                 {/* Search Bar */}
                 <div className="relative max-w-md mb-8 items-end ml-auto">
                     <div className="absolute left-4 top-1/2 -translate-y-1/2">
-                        <div><img src="/images/search.png" alt="Search" /></div>
+                        <div><img src={searchIcon} alt="Search" /></div>
                     </div>
                     <input 
                         type="text" 
@@ -161,7 +176,7 @@ export default function Settings() {
                 <div className="max-w-4xl">
                     <div className="flex flex-col items-start gap-4 mb-8">
                         <div className="w-16 h-16 rounded-full overflow-hidden">
-                            <div><img src="/images/blackboy.png" alt="Profile" /></div>
+                            <div><img src={blackboyImage} alt="Profile" /></div>
                         </div>
                         <div>
                             <p className="text-sm text-gray-600 cursor-pointer hover:text-black transition-colors">Change Pic</p>

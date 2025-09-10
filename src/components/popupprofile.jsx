@@ -1,5 +1,9 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
+import smallProfileImage from '../assets/smallprofile.png';
+import ciSettingsIcon from '../assets/ci_settings.png';
+import addFriendIcon from '../assets/addfriend.png';
 
 export default function ProfileDropdown({ onClose }) {
     const handleNavigation = (path) => {
@@ -36,7 +40,7 @@ export default function ProfileDropdown({ onClose }) {
                 <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 rounded-full overflow-hidden">
                         <img 
-                            src="/images/smallprofile.png" 
+                            src={smallProfileImage} 
                             alt="Profile" 
                             className="w-full h-full object-cover"
                         />
@@ -53,7 +57,7 @@ export default function ProfileDropdown({ onClose }) {
                         onClick={() => handleNavigation('settings')}
                         className="flex items-center gap-2 px-4 py-2 border border-black rounded-[20px] hover:bg-gray-50 transition-colors"
                     >
-                        <img src="/images/ci_settings.png" alt="" className='w-28px] h-[28px]'/>
+                        <img src={ciSettingsIcon} alt="Settings Icon" className="w-[28px] h-[28px]"/>
                         <Link to="/settings">Settings</Link>
                     </button>
 
@@ -61,7 +65,7 @@ export default function ProfileDropdown({ onClose }) {
                         onClick={() => handleNavigation('invite')}
                         className="flex items-center gap-2 px-4 py-2 border border-black rounded-[20px] hover:bg-gray-50 transition-colors"
                     >
-                        <img src="/images/addfriend.png" alt="" className='h-[28px]'/>
+                        <img src={addFriendIcon} alt="Invite Friend Icon" className="h-[28px]"/>
                         <span className="text-[14px] font-medium">Invite a Friend</span>
                     </button>
                 </div>
@@ -75,16 +79,16 @@ export default function ProfileDropdown({ onClose }) {
                     onClick={() => handleNavigation('signup')}
                     className="py-3 px-2 hover:bg-gray-200 rounded cursor-pointer transition-colors"
                 >
-                    <Link to="/signout">Add another account</Link>
+                    <Link to="/signup">Add another account</Link>
                 </div>
 
                 <hr className="border-gray-300" />
 
                 <div 
-                    onClick={ () => handleLogout ('logout')}
+                    onClick={handleLogout}
                     className="py-3 px-2 hover:bg-gray-200 rounded cursor-pointer transition-colors"
                 >
-                    <Link to="/login">Logout</Link>
+                    <Link to="/signout">Logout</Link>
                 </div>
 
                 <hr className="border-gray-300" />

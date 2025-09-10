@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../firebase/firebase";
 import { useNavigate } from "react-router-dom";
+import logoImage from '../assets/logo.png'
+import sideImage from '../assets/side.jpg'
+import googleImage from '../assets/google.png'
 
 export default function Signout() {
   const [isLoading, setIsLoading] = useState(false);
@@ -33,7 +36,7 @@ export default function Signout() {
     <div className="min-h-screen flex bg-[#EAEAEA]"> {/* Full screen container */}
       <div className="w-1/2">
         <div className="flex flex-col items-start">
-          <img src="/images/logo.png" alt="" className="w-[150px] ml-7 pl-[40px] h-[100px]" />
+          <img src={logoImage} alt="" className="w-[150px] ml-7 pl-[40px] h-[100px]" />
           <h1 className="font-[jaina] text-[25px] leading-[100%] pl-[72px] text-left">CheckMate</h1>
         </div>
         
@@ -49,7 +52,7 @@ export default function Signout() {
               isLoading ? 'bg-gray-600 cursor-not-allowed' : 'bg-black hover:bg-gray-800'
             } transition-colors`}
           >
-            <img src="/images/google.png" alt="" className="w-5 h-5" />
+            <img src={googleImage} alt="" className="w-5 h-5" />
             {isLoading ? 'Creating Account...' : 'Continue with Google'}
           </button>
           
@@ -66,14 +69,14 @@ export default function Signout() {
           <p className="text-center w-[466px] h-[24px] text-[16px] text-[#808080] mt-2">
             Sign up with your Google account to easily collaborate with teammates
           </p>
-          <p className="text-center w-[450px] mt-40 text-[14px] text-[#808080] font-semibold">
+          <p className="text-center w-[450px] mt-100 text-[14px] text-[#808080] font-semibold">
             By clicking on continue you accept the terms and conditions of CheckMate
           </p>
         </div>
       </div>
       
       <div className="w-1/2">
-        <img src="/images/side.jpg" alt="" className="w-[732px] h-[1024px]" />
+        <img src={sideImage}alt="" className="w-[732px] h-[1024px]" />
       </div>
     </div>
   );

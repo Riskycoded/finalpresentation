@@ -1,5 +1,26 @@
-import React, {useState, useEffect } from "react";
+
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import logoImage from '../assets/logo.png';
+import whiteHome from '../assets/whitehome.png';
+import tDesign from '../assets/tdesign_task.png';
+import formKit from '../assets/formkit_people.png';
+import simplelineicons from '../assets/simple-line-icons_calender.png';
+import settings07 from '../assets/setting-07.png';
+import linebackIcon from '../assets/lineback.png';
+import ciSettingsIcon from '../assets/ci_settings.png';
+import accountSettingIcon from '../assets/account-setting-02.png';
+import listSettingIcon from '../assets/list-setting.png';
+import secondSettingsIcon from '../assets/secondsettings.png';
+import databaseIcon from '../assets/database-02.png';
+import faqIcon from '../assets/faq.png';
+import searchIcon from '../assets/search.png';
+import dataAnalysisImage from '../assets/dataanalysis.png';
+import malhubImage from '../assets/malhub.png';
+import webDevImage from '../assets/webdev.png';
+import menuBarImage from '../assets/menubarr.png';
+import makaImage from '../assets/maka.png';
+import contentWritingImage from '../assets/contentwriting.png';
 
 export default function Tasksettings() {
     const navigate = useNavigate();
@@ -21,7 +42,7 @@ export default function Tasksettings() {
             {/* Left Sidebar */}
             <div className="w-[123px] h-full bg-[#EFEFEF] shadow-sm flex flex-col items-center">
                 <div className="w-[62px] h-[62px] pt-[3px] pl-[7px]">
-                    <img src="/images/logo.png" alt="Logo" />
+                    <img src={logoImage} alt="Logo" />
                 </div>
                 
                 <div className="flex flex-col gap-[5px] pt-[50px] pl-[17px]">
@@ -29,29 +50,29 @@ export default function Tasksettings() {
                         onClick={() => handleNavigation('dashboard')}
                         className="pt-[13px] pr-[31px] pl-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg transition-colors"
                     >
-                        <img src="/images/whitehome.png" alt="Home" />
+                        <img src={whiteHome} alt="Dashboard" />
                     </div>
                     <div 
                         onClick={() => handleNavigation('tasks')}
                         className="pt-[13px] pr-[31px] pl-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg transition-colors"
                     >
-                        <img src="/images/tdesign_task.png" alt="Tasks" />
+                        <img src={tDesign} alt="Tasks" />
                     </div>
                     <div 
                         onClick={() => handleNavigation('people')}
                         className="pt-[13px] pr-[31px] pl-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg transition-colors"
                     >
-                        <img src="/images/formkit_people.png" alt="People" />
+                        <img src={formKit} alt="Teams" />
                     </div>
                     <div 
                         onClick={() => handleNavigation('calendar')}
                         className="pt-[13px] pr-[31px] pl-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg transition-colors"
                     >
-                        <img src="/images/simple-line-icons_calender.png" alt="Calendar" />
+                        <img src={simplelineicons} alt="Calendar" />
                     </div>
                     {/* Current page - Settings (highlighted) */}
                     <div className="w-[89px] pr-[31px] pl-[31px] bg-black h-[53px] pt-[13px] pb-[13px] rounded-[10px] border-[1.5px]">
-                        <img src="/images/setting-07.png" alt="Settings" />
+                        <img src={settings07} alt="Settings" />
                     </div>
                 </div>
                 
@@ -60,7 +81,7 @@ export default function Tasksettings() {
                         onClick={() => handleNavigation('')}
                         className="cursor-pointer hover:bg-gray-200 rounded-lg p-2 transition-colors"
                     >
-                        <img src="/images/lineback.png" alt="Back" />
+                        <img src={linebackIcon} alt="Sign Out" />
                     </div>
                 </div>
             </div> 
@@ -69,7 +90,7 @@ export default function Tasksettings() {
             <div className="w-[299px] h-full bg-[#EFEFEF] shadow-sm overflow-y-auto">
                 <div className="p-6">
                     <div className="flex items-center gap-3 mb-8">
-                        <img src="/images/ci_settings.png" alt="Settings Icon" className="w-[53px] h-[50px]"/>
+                        <img src={ciSettingsIcon} alt="Settings Icon" className="w-[53px] h-[50px]"/>
                         <h1 className="text-[48px] font-semibold text-[#4D4A4A]">Settings</h1>
                     </div>
 
@@ -78,13 +99,13 @@ export default function Tasksettings() {
                             onClick={() => handleSettingsNavigation('account')}
                             className="flex items-center gap-[10px] rounded-[5px] p-[10px] w-[169px] text-[#585858] hover:bg-gray-100 rounded-lg cursor-pointer transition-colors"
                         >
-                            <div><img src="/images/account-setting-02.png" alt="Account" /></div>
+                            <div><img src={accountSettingIcon} alt="Edit Account" /></div>
                             <span className="text-sm">Edit Account</span>
                         </div>
                         
                         {/* Current section - Tasks (highlighted) */}
                         <div className="flex items-center gap-[10px] rounded-[5px] text-white p-[10px] bg-black rounded-lg cursor-pointer">
-                            <div className="w-[20px] h-[20px]"><img src="/images/list-setting.png" alt="Tasks" /></div>
+                            <div className="w-[20px] h-[20px]"><img src={listSettingIcon} alt="Tasks Settings" /></div>
                             <span className="text-[20px] font-semibold">Tasks</span>
                         </div>
                         
@@ -92,7 +113,7 @@ export default function Tasksettings() {
                             onClick={() => handleSettingsNavigation('Api')}
                             className="flex items-center gap-[10px] rounded-[5px] text-[#585858] p-[10px] hover:bg-gray-100 rounded-lg cursor-pointer transition-colors"
                         >
-                            <div className="w-[20px] h-[20px]"><img src="/images/secondsettings.png" alt="API" /></div>
+                            <div className="w-[20px] h-[20px]"><img src={secondSettingsIcon} alt="API Settings" /></div>
                             <span className="text-sm">API</span>
                         </div>
                         
@@ -100,7 +121,7 @@ export default function Tasksettings() {
                             onClick={() => handleSettingsNavigation('about')}
                             className="flex items-center gap-[10px] rounded-[5px] text-[#585858] p-[10px] hover:bg-gray-100 rounded-lg cursor-pointer transition-colors"
                         >
-                            <div className="w-[20px] h-[20px]"><img src="/images/database-02.png" alt="About" /></div>
+                            <div className="w-[20px] h-[20px]"><img src={databaseIcon} alt="About Us" /></div>
                             <span className="text-sm">About Us</span>
                         </div>
                         
@@ -108,7 +129,7 @@ export default function Tasksettings() {
                             onClick={() => handleSettingsNavigation('faqs')}
                             className="flex items-center gap-[10px] rounded-[5px] text-[#585858] p-[10px] hover:bg-gray-100 rounded-lg cursor-pointer transition-colors"
                         >
-                            <div className="w-[20px] h-[20px]"><img src="/images/faq.png" alt="FAQs" /></div>
+                            <div className="w-[20px] h-[20px]"><img src={faqIcon} alt="FAQs" /></div>
                             <span className="text-sm">FAQs</span>
                         </div>
                     </div>
@@ -126,7 +147,7 @@ export default function Tasksettings() {
                     {/* Search Bar */}
                     <div className="relative">
                         <div className="absolute left-4 top-1/2 -translate-y-1/2">
-                            <img src="/images/search.png" alt="Search" />
+                            <img src={searchIcon} alt="Search" />
                         </div>
                         <input 
                             type="text" 
@@ -153,7 +174,7 @@ export default function Tasksettings() {
                                 {/* Data Analysis Card */}
                                 <div className="w-[267px] bg-[#E2E2E2] rounded-[10px] shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer">
                                     <div className="relative">
-                                        <img src="/images/dataanalysis.png" alt="Data Analysis" className="w-full h-[110px] object-cover"/>
+                                        <img src={dataAnalysisImage} alt="Data Analysis" className="w-full h-[110px] object-cover"/>
                                     </div>
                                     <div className="p-4">
                                         <div className="flex justify-between items-start mb-2">
@@ -163,7 +184,7 @@ export default function Tasksettings() {
                                             </div>
                                         </div>
                                         <div className="flex justify-end">
-                                            <img src="/images/malhub.png" alt="Profile" className="h-[24px] w-[24px] rounded-full"/>
+                                            <img src={malhubImage} alt="Profile" className="h-[24px] w-[24px] rounded-full"/>
                                         </div>
                                     </div>
                                 </div>
@@ -171,7 +192,7 @@ export default function Tasksettings() {
                                 {/* Web Development Card */}
                                 <div className="w-[267px] bg-[#E2E2E2] rounded-[10px] shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer">
                                     <div className="relative">
-                                        <img src="/images/webdev.png" alt="Web Development" className="w-full h-[110px] object-cover"/>
+                                        <img src={webDevImage} alt="Web Development" className="w-full h-[110px] object-cover"/>
                                     </div>
                                     <div className="p-4">
                                         <div className="flex justify-between items-start mb-2">
@@ -180,11 +201,11 @@ export default function Tasksettings() {
                                                 <p className="text-[12px] text-[#54577A]">Web Developers</p>
                                             </div>
                                             <button className="hover:bg-gray-100 rounded p-1 transition-colors">
-                                                <img src="/images/menubarr.png" alt="Menu" className="w-[16px] h-[16px]"/>
+                                                <img src={menuBarImage} alt="Menu" className="w-[16px] h-[16px]"/>
                                             </button>
                                         </div>
                                         <div className="flex justify-end">
-                                            <img src="/images/maka.png" alt="Profile" className="h-[24px] w-[24px] rounded-full"/>
+                                            <img src={makaImage} alt="Profile" className="h-[24px] w-[24px] rounded-full"/>
                                         </div>
                                     </div>
                                 </div>
@@ -199,7 +220,7 @@ export default function Tasksettings() {
                                 {/* Project Card */}
                                 <div className="w-[267px] bg-[#E2E2E2] rounded-[10px] shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer opacity-75">
                                     <div className="relative">
-                                        <img src="/images/contentwriting.png" alt="Project" className="w-full h-[110px] object-cover"/>
+                                        <img src={contentWritingImage} alt="Project" className="w-full h-[110px] object-cover"/>
                                     </div>
                                     <div className="p-4">
                                         <div className="flex justify-between items-start mb-2">
@@ -209,7 +230,7 @@ export default function Tasksettings() {
                                             </div>
                                         </div>
                                         <div className="flex justify-end">
-                                            <img src="/images/malhub.png" alt="Profile" className="h-[24px] w-[24px] rounded-full"/>
+                                            <img src={malhubImage} alt="Profile" className="h-[24px] w-[24px] rounded-full"/>
                                         </div>
                                     </div>
                                 </div>

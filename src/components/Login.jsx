@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../firebase/firebase";
 import { useNavigate } from "react-router-dom";
+import sideImage from '../assets/side.jpg'
+import googleImage from '../assets/google.png'
+import logoImage from '../assets/logo.png'
 
 export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
@@ -32,7 +35,7 @@ export default function Login() {
     <div className="min-h-screen flex bg-[#EAEAEA]"> {/* Full screen container */}
       <div className="w-1/2">
         <div className="flex flex-col items-start">
-          <img src="/images/logo.png" alt="" className="w-[150px] pl-[40px] ml-7 h-[100px]" />
+          <img src={logoImage} alt="" className="w-[150px] pl-[40px] ml-7 h-[100px]" />
           <h1 className="font-[jaina] text-[25px] leading-[100%] pl-[72px] text-left">CheckMate</h1>
         </div>
         
@@ -48,7 +51,7 @@ export default function Login() {
               isLoading ? 'bg-gray-600 cursor-not-allowed' : 'bg-black hover:bg-gray-800'
             } transition-colors`}
           >
-            <img src="/images/google.png" alt="" className="w-5 h-5" />
+            <img src={googleImage} alt="" className="w-5 h-5" />
             {isLoading ? 'Signing in...' : 'Continue with Google'}
           </button>
           
@@ -89,7 +92,7 @@ export default function Login() {
       </div>
       
       <div className="w-1/2">
-        <img src="/images/side.jpg" alt="" className="w-[732px] h-[1024px]" />
+        <img src={ sideImage } alt="" className="w-[732px] h-[1024px]" />
       </div>
     </div>
   );

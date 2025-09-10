@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import imageCancel from '../assets/cancel.png'
+import charlieImage from '../assets/charlie.png'
 
 export default function Plusadd({ onClose, onAdd }) {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -42,7 +44,7 @@ export default function Plusadd({ onClose, onAdd }) {
         <div className="flex justify-between items-center mb-4">
           <p className="text-lg font-semibold text-web3-green">Add New Task</p>
           <div className="w-5 h-5 rounded cursor-pointer" onClick={onClose}>
-            <img src="/images/cancel.png" alt="" className="hover:opacity-80" />
+            <img src={imageCancel} alt="" className="hover:opacity-80" />
           </div>
         </div>
 
@@ -111,7 +113,7 @@ export default function Plusadd({ onClose, onAdd }) {
           <div className="flex items-start gap-[-8px]">
             <div className="flex">
             <div className="w-8 h-8 bg-gradient-to-br from-web3-green to-web3-green-light rounded-full border-2 border-white shadow-sm">
-              <img src="/images/charlie.png" alt="" />
+              <img src={charlieImage} alt="" />
             </div>
             <div className="w-6 h-6 border rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-300 transition-colors">
               <img src="/images/cancel.png" alt="" />
@@ -124,9 +126,9 @@ export default function Plusadd({ onClose, onAdd }) {
                 const newTask = {
                   title: taskName,
                   description: teamName,
-                  mainImage: "/images/contentwriting.png", // Default image
-                  bottomImage: "/images/student.png", // Default image
-                  dotted: "/images/menubarr.png"
+                  mainImage: "/assets/contentwriting.png", // Default image
+                  bottomImage: "/assets/student.png", // Default image
+                  dotted: "/assets/menubarr.png"
                 };
                 onAdd(newTask);
                 onClose();

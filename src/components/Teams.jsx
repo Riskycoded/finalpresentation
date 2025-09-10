@@ -1,5 +1,37 @@
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logoImage from '../assets/logo.png';
+import whiteHome from '../assets/whitehome.png';
+import tdesignTask from '../assets/tdesign_task.png';
+import formkitPeople from '../assets/formkit_people.png';
+import simplelineicons from '../assets/simple-line-icons_calender.png';
+import settings07 from '../assets/setting-07.png';
+import logoutIcon from '../assets/line-md_logout.png';
+import charlieImage from '../assets/charlie.png';
+import charmieImage from '../assets/charmie.png';
+import victoriaImage from '../assets/victoria.png';
+import melanieImage from '../assets/melanie.png';
+import michaelImage from '../assets/michael.png';
+import ellipse233Image from '../assets/Ellipse 233.png';
+import ellipse234Image from '../assets/Ellipse 234.png';
+import ellipse235Image from '../assets/Ellipse 235.png';
+import ellipse236Image from '../assets/Ellipse 236.png';
+import ellipse237Image from '../assets/Ellipse 237.png';
+import addCircleIcon from '../assets/add-circle.png';
+import socialGroupIcon from '../assets/socialgroup.png';
+import menuBarImage from '../assets/menubarr.png';
+import plusyIcon from '../assets/plusy.png';
+import greaterIcon from '../assets/greater.png';
+import callIcon from '../assets/call.png';
+import videoIcon from '../assets/video.png';
+import docsendIcon from '../assets/docsend.png';
+import picsendIcon from '../assets/picsend.png';
+import emojisIcon from '../assets/emojis.png';
+import camsendIcon from '../assets/camsend.png';
+import sendsendIcon from '../assets/sendsend.png';
+import cancelIcon from '../assets/cancel.png';
+import searchIcon from '../assets/search.png';
 
 export default function Teams() {
     const navigate = useNavigate();
@@ -10,25 +42,25 @@ export default function Teams() {
         {
             id: 1,
             name: "Chris Morich",
-            avatar: "/images/charlie.png",
+            avatar: charlieImage,
             lastMessage: "Hi Angelina! How are You?",
         },
         {
             id: 2,
             name: "Charmie",
-            avatar: "/images/charmie.png",
+            avatar: charmieImage,
             lastMessage: "Do you need that design?",
         },
         {
             id: 3,
             name: "Victoria Mandala",
-            avatar: "/images/victoria.png",
+            avatar: victoriaImage,
             lastMessage: "What is the price of hourly...",
         },
         {
             id: 4,
             name: "Melanie Chu",
-            avatar: "/images/melanie.png",
+            avatar: melanieImage,
             lastMessage: "Awesome Design!!",
         }
     ]);
@@ -36,7 +68,7 @@ export default function Teams() {
         {
             id: 1,
             sender: "Chris Morich",
-            avatar: "/images/charlie.png",
+            avatar: charlieImage,
             message: "Hi! Everyone, What's the update about the design",
             time: "12:30pm",
             type: "received"
@@ -44,7 +76,7 @@ export default function Teams() {
         {
             id: 2,
             sender: "Me",
-            avatar: "/images/michael.png",
+            avatar: michaelImage,
             message: "Hi Chris, Hi Cris, Im working on the variables and components",
             time: "12:45pm",
             type: "sent"
@@ -52,7 +84,7 @@ export default function Teams() {
         {
             id: 3,
             sender: "Charmie",
-            avatar: "/images/charmie.png",
+            avatar: charmieImage,
             message: "Thats good. Jay keep it up",
             time: "12:46pm",
             type: "received"
@@ -60,7 +92,7 @@ export default function Teams() {
         {
             id: 4,
             sender: "Me",
-            avatar: "/images/michael.png",
+            avatar: michaelImage,
             message: "Don't forget to put the deadline on calendar for easy reminder need.",
             time: "1:05pm",
             type: "sent"
@@ -68,7 +100,7 @@ export default function Teams() {
         {
             id: 5,
             sender: "Charmie",
-            avatar: "/images/charmie.png",
+            avatar: charmieImage,
             message: "Doing that right away and im done with styles.",
             time: "1:10pm",
             type: "received"
@@ -76,7 +108,7 @@ export default function Teams() {
         {
             id: 6,
             sender: "Chris Morich",
-            avatar: "/images/charlie.png",
+            avatar: charlieImage,
             message: "Okay everyone, keep me updated.",
             time: "1:56pm",
             type: "received"
@@ -88,8 +120,8 @@ export default function Teams() {
     const [showCreateGroup, setShowCreateGroup] = useState(false);
     const [newGroupName, setNewGroupName] = useState("");
     const [collaborators, setCollaborators] = useState([
-        { id: 1, name: "Angela", avatar: "/images/charlie.png" },
-        { id: 2, name: "Charmie", avatar: "/images/charmie.png" }
+        { id: 1, name: "Angela", avatar: charlieImage },
+        { id: 2, name: "Charmie", avatar: charmieImage }
     ]);
     const [groups, setGroups] = useState([
         {
@@ -119,7 +151,7 @@ export default function Teams() {
             setGroupMessages(prev => [...prev, {
                 id: prev.length + 1,
                 sender: "Me",
-                avatar: "/images/michael.png",
+                avatar: michaelImage,
                 message: messageText,
                 time: currentTime,
                 type: "sent"
@@ -226,38 +258,38 @@ export default function Teams() {
             {/* Sidebar */}
             <div className="bg-[#EFEFEF] w-[246px] px-6 min-h-screen opacity-100 rounded-tr-[24px] rounded-br-[24px] fixed top-0 left-0">
                 <div className="w-[109px] h-[114px]">
-                    <img src="/images/logo.png" alt="" className="w-[109px] mt-[3px] ml-[2px] h-[114px]"/>
+                    <img src={logoImage} alt="Logo" className="w-[109px] mt-[3px] ml-[2px] h-[114px]"/>
                     <h1 className="w-[76px] h-[26px] text-[20px] font-[jaini]">CheckMate</h1>
                 </div>
                     
                 <div className="gap-[5px] mt-[30px]">
                     <div onClick={() => handleNavigation('dashboard')} className="flex gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg">
-                        <img src="/images/whitehome.png" alt="" />
+                        <img src={whiteHome} alt="Dashboard" />
                         <h1 className="text-[#666666] text-[20px] font-semibold text-center">Dashboard</h1>
                     </div>
 
                     <div onClick={() => handleNavigation('tasks')} className="flex gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg">
-                        <img src="/images/tdesign_task.png" alt="" />
+                        <img src={tdesignTask} alt="Tasks" />
                         <h1 className="font-semibold text-[18px] text-[#666666]">Tasks Board</h1>
                     </div>
 
                     <div className="flex gap-[10px] shadow-[0px_4px_4px_0px_#00000060] w-[195px] h-[53px] rounded-[10px] bg-black border-[1.5px] pl-[31px] pt-[13px] pr-[31px] pb-[13px]">
-                        <img src="/images/formkit_people.png" alt="" />
+                        <img src={formkitPeople} alt="Teams" />
                         <h1 className="font-semibold text-[18px] text-white">Teams</h1>
                     </div>
                 
                     <div onClick={() => handleNavigation('calendar')} className="flex gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg">
-                        <img src="/images/simple-line-icons_calender.png" alt="" />
+                        <img src={simplelineicons} alt="Calendar" />
                         <h1 className="font-semibold text-[18px] text-[#666666]">Calendar</h1>
                     </div>
                 
-                    <div onClick={() => handleNavigation('Settings')} className="flex gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg">
-                        <img src="/images/setting-07.png" alt="" />
+                    <div onClick={() => handleNavigation('settings')} className="flex gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg">
+                        <img src={settings07} alt="Settings" />
                         <h1 className="font-semibold text-[18px] text-[#666666]">Settings</h1>
                     </div>
 
                     <div onClick={() => handleNavigation('login')} className="flex bg-[url('/images/Ellipse.png')] gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] mt-[30px] cursor-pointer hover:opacity-80">
-                        <img src="/images/line-md_logout.png" alt="" />
+                        <img src={logoutIcon} alt="Log Out" />
                         <h1>Log Out</h1>
                     </div>
                 </div>
@@ -268,14 +300,14 @@ export default function Teams() {
                 {/* Header Section */}
                 <div className="flex justify-between items-center mb-8">
                     <div className="flex items-center gap-[19px]">
-                        <img src="/images/formkit_people.png" alt="" className="w-[38px] pt-[7px] h-[46px]"/>
+                        <img src={formkitPeople} alt="Teams Icon" className="w-[38px] pt-[7px] h-[46px]"/>
                         <h1 className="font-semibold text-[60px]">Teams</h1>
                     </div>
 
                     <div className="relative flex-1 max-w-md h-[56px] bg-[#F5F5F7] rounded-[10px] ml-6">
                         <span>
                             <img 
-                                src="/images/search.png" 
+                                src={searchIcon} 
                                 alt="Search" 
                                 className="absolute left-[17px] top-1/2 -translate-y-1/2 h-[27.51px] w-auto"
                             />
@@ -294,12 +326,12 @@ export default function Teams() {
                 <div className="mt-8 flex">
                     <div>
                         <div className=" -space-x-4 flex mb-8">
-                            <img src="/images/Ellipse 233.png" alt="" className="w-[50px] h-[50px]"/>
-                            <img src="/images/Ellipse 234.png" alt="" className="w-[50px] h-[50px]"/>
-                            <img src="/images/Ellipse 235.png" alt="" className="w-[50px] h-[50px]"/>
-                            <img src="/images/Ellipse 236.png" alt="" className="w-[50px] h-[50px]"/>
-                            <img src="/images/Ellipse 237.png" alt="" className="w-[50px] h-[50px]"/>
-                            <img src="/images/add-circle.png" alt="" className="w-[50px] h-[50px]"/>
+                            <img src={ellipse233Image} alt="Collaborator 1" className="w-[50px] h-[50px]"/>
+                            <img src={ellipse234Image} alt="Collaborator 2" className="w-[50px] h-[50px]"/>
+                            <img src={ellipse235Image} alt="Collaborator 3" className="w-[50px] h-[50px]"/>
+                            <img src={ellipse236Image} alt="Collaborator 4" className="w-[50px] h-[50px]"/>
+                            <img src={ellipse237Image} alt="Collaborator 5" className="w-[50px] h-[50px]"/>
+                            <img src={addCircleIcon} alt="Add Collaborator" className="w-[50px] h-[50px]"/>
                         </div>
 
                         <div className="gap-4 space-y-[15px]">
@@ -317,7 +349,7 @@ export default function Teams() {
                                         onClick={() => setSelectedChat(`private-${message.id}`)}
                                     >
                                         <div className="relative">
-                                            <img src={message.avatar} alt="" className="w-[50px] h-[40px] rounded-full"/>
+                                            <img src={message.avatar} alt={message.name} className="w-[50px] h-[40px] rounded-full"/>
                                             {onlineUsers.includes(message.name) && (
                                                 <div className="absolute bottom-0 right-0 w-3 h-3 0 rounded-full border-2 border-white"></div>
                                             )}
@@ -353,7 +385,7 @@ export default function Teams() {
                                     className={`bg-[${selectedChat === group.id ? '#323232' : '#4A4A4A'}] rounded-[10px] gap-[15px] w-[320px] flex flex-row h-[70px] cursor-pointer bg-[#323232] transition-colors mb-4`}
                                 >
                                     <div className="my-auto" >
-                                        <img src="/images/socialgroup.png" alt="" className="my-auto"/>
+                                        <img src={socialGroupIcon} alt="Group Icon" className="my-auto"/>
                                     </div>
 
                                     <div className="text-white gap-[1px] my-auto">
@@ -373,7 +405,7 @@ export default function Teams() {
                                 </div>
 
                                 <div className="mt-[18px]">
-                                    <img src="/images/menubarr.png" alt="" className="cursor-pointer"/>
+                                    <img src={menuBarImage} alt="Menu" className="cursor-pointer"/>
                                 </div>
                                 
                             </div>
@@ -400,11 +432,11 @@ export default function Teams() {
                                             key={collaborator.id}
                                             className="flex items-center gap-[8px] bg-gray-200 rounded-full px-[12px] py-[6px]"
                                         >
-                                            <img src={collaborator.avatar} alt="" className="w-[25px] h-[25px] rounded-full"/>
+                                            <img src={collaborator.avatar} alt={collaborator.name} className="w-[25px] h-[25px] rounded-full"/>
                                             <p className="text-[13px] font-medium">{collaborator.name}</p>
                                             <img 
-                                                src="/images/cancel.png" 
-                                                alt="" 
+                                                src={cancelIcon} 
+                                                alt="Remove Collaborator" 
                                                 className="w-[15px] h-[15px] cursor-pointer"
                                                 onClick={() => handleRemoveCollaborator(collaborator.id)}
                                             />
@@ -412,7 +444,7 @@ export default function Teams() {
                                     ))}
 
                                     <div className="w-[40px] h-[40px] rounded-full flex items-center justify-center cursor-pointer">
-                                        <img src="/images/plusy.png" alt="" className="w-[35px] h-[35px]"/>
+                                        <img src={plusyIcon} alt="Add Collaborator" className="w-[35px] h-[35px]"/>
                                     </div>
 
                                     {showCreateGroup && (
@@ -420,7 +452,7 @@ export default function Teams() {
                                             className="w-[40px] h-[40px] rounded-full flex items-center justify-center cursor-pointer"
                                             onClick={handleCreateGroup}
                                         >
-                                            <img src="/images/greater.png" alt="" className="w-[35px] h-[35px]"/>
+                                            <img src={greaterIcon} alt="Create Group" className="w-[35px] h-[35px]"/>
                                         </div>
                                     )}
                                 </div>
@@ -451,7 +483,7 @@ export default function Teams() {
                     <div>
                         <div className="flex w-[751px] h-[87px] gap-[21px] p-[10px] bg-[#FFFFFF] rounded-[15px]">
                             <div>
-                                <img src="/images/socialgroup.png" alt="" className="w-[67px] border-0.5 h-[67px]"/>
+                                <img src={socialGroupIcon} alt="Chat Icon" className="w-[67px] border-0.5 h-[67px]"/>
                             </div>
 
                             <div>
@@ -474,8 +506,8 @@ export default function Teams() {
                             </div>
 
                             <div className="pl-[111px] p h-[52px] margin-left: auto gap-[5px] flex items-end justify-end">
-                                <img src="/images/call.png" alt="" className="w-[60px] h-[52px]"/>
-                                <img src="/images/video.png" alt="" className="w-[60px] h-[52px]"/>
+                                <img src={callIcon} alt="Call" className="w-[60px] h-[52px]"/>
+                                <img src={videoIcon} alt="Video" className="w-[60px] h-[52px]"/>
                             </div>
 
                         </div>
@@ -496,7 +528,7 @@ export default function Teams() {
                                                         <p className="text-[16px] my-auto font-semibold">{msg.message}</p>
                                                     </div>
                                                     <div className="my-center">
-                                                        <img src="/images/michael.png" alt="" className="w-[80px] h-[50px]" />
+                                                        <img src={michaelImage} alt="Me" className="w-[80px] h-[50px]" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -506,7 +538,7 @@ export default function Teams() {
                                         <>
                                             <div className="bg-[#F5F5F5] w-[364px] rounded-[8px] h-[116px] p-[18px] gap-[16px] flex flex-row mt-[20px]">
                                                 <div>
-                                                    <img src={msg.avatar} alt="" className="w-[50px] h-[50px]"/>
+                                                    <img src={msg.avatar} alt={msg.sender} className="w-[50px] h-[50px]"/>
                                                 </div>
                                                 <div>
                                                     <p className="text-[20px] font-semibold">{msg.sender}</p>
@@ -530,7 +562,7 @@ export default function Teams() {
                                                         <p className="text-[16px] my-auto font-semibold">{msg.message}</p>
                                                     </div>
                                                     <div className="my-center">
-                                                        <img src="/images/michael.png" alt="" className="w-[80px] h-[50px]" />
+                                                        <img src={michaelImage} alt="Me" className="w-[80px] h-[50px]" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -540,7 +572,7 @@ export default function Teams() {
                                         <>
                                             <div className="bg-[#F5F5F5] w-[364px] rounded-[8px] h-[116px] p-[18px] gap-[16px] flex flex-row mt-[20px]">
                                                 <div>
-                                                    <img src={messages.find(m => m.id === parseInt(selectedChat.split('-')[1]))?.avatar} alt="" className="w-[50px] h-[50px]"/>
+                                                    <img src={messages.find(m => m.id === parseInt(selectedChat.split('-')[1]))?.avatar} alt={msg.sender} className="w-[50px] h-[50px]"/>
                                                 </div>
                                                 <div>
                                                     <p className="text-[20px] font-semibold">{msg.sender}</p>
@@ -580,7 +612,7 @@ export default function Teams() {
                                                 handleSendMessage(`📎 Attached: ${file.name}`);
                                             }
                                         }}/>
-                                        <img src="/images/docsend.png" alt="" className="w-[44px] h-[44px]"/>
+                                        <img src={docsendIcon} alt="Send Document" className="w-[44px] h-[44px]"/>
                                     </label>
                                     <label className="cursor-pointer hover:opacity-80">
                                         <input type="file" accept="image/*" className="hidden" onChange={(e) => {
@@ -589,17 +621,17 @@ export default function Teams() {
                                                 handleSendMessage(`🖼️ Image: ${file.name}`);
                                             }
                                         }}/>
-                                        <img src="/images/picsend.png" alt="" className="w-[44px] h-[44px]"/>
+                                        <img src={picsendIcon} alt="Send Image" className="w-[44px] h-[44px]"/>
                                     </label>
                                     <img 
-                                        src="/images/emojis.png" 
-                                        alt="" 
+                                        src={emojisIcon} 
+                                        alt="Emojis" 
                                         onClick={() => setShowEmojiPicker(!showEmojiPicker)}
                                         className="cursor-pointer hover:opacity-80 w-[44px] h-[44px]"
                                     />
                                     <img 
-                                        src="/images/camsend.png" 
-                                        alt="" 
+                                        src={camsendIcon} 
+                                        alt="Send Camera Photo" 
                                         className="cursor-pointer hover:opacity-80 w-[44px] h-[44px]"
                                         onClick={() => {
                                             // This would typically integrate with a camera API
@@ -607,8 +639,8 @@ export default function Teams() {
                                         }}
                                     />
                                     <img 
-                                        src="/images/sendsend.png" 
-                                        alt="" 
+                                        src={sendsendIcon} 
+                                        alt="Send Message" 
                                         onClick={() => handleSendMessage(newMessage)}
                                         className="cursor-pointer hover:opacity-80 w-[44px] h-[44px]"
                                     />

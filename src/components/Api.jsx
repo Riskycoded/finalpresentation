@@ -1,5 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import logoImage from '../assets/logo.png'
+import whiteHome from '../assets/whitehome.png'
+import tdesignTask from '../assets/tdesign_task.png'
+import formkitPeople from '../assets/formkit_people.png'
+import simplelineicons from '../assets/simple-line-icons_calender.png'
+import settings07 from '../assets/setting-07.png'
+import lineback from '../assets/lineback.png'
+import ciSettings from '../assets/ci_settings.png'
+import accountSetting from '../assets/account-setting-02.png'
+import listSetting from '../assets/list-setting.png'
+import apiWhite from '../assets/apiwhite.png'
+import database02 from '../assets/database-02.png'
+import faq from '../assets/faq.png'
 
 export default function Api() {
     const navigate = useNavigate();
@@ -21,7 +34,7 @@ export default function Api() {
             {/* Left Sidebar */}
             <div className="w-[123px] h-full bg-[#EFEFEF] shadow-sm flex flex-col items-center">
                 <div className="w-[62px] h-[62px] pt-[3px] pl-[7px]">
-                    <img src="/images/logo.png" alt="Logo" />
+                    <img src={logoImage} alt="Logo" />
                 </div>
                 
                 <div className="flex flex-col gap-[5px] pt-[50px] pl-[17px]">
@@ -29,29 +42,29 @@ export default function Api() {
                         onClick={() => handleNavigation('dashboard')}
                         className="pt-[13px] pr-[31px] pl-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg transition-colors"
                     >
-                        <img src="/images/whitehome.png" alt="Home" />
+                        <img src={whiteHome} alt="Home" />
                     </div>
                     <div 
                         onClick={() => handleNavigation('tasks')}
                         className="pt-[13px] pr-[31px] pl-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg transition-colors"
                     >
-                        <img src="/images/tdesign_task.png" alt="Tasks" />
+                        <img src={tdesignTask} alt="Tasks" />
                     </div>
                     <div 
                         onClick={() => handleNavigation('people')}
                         className="pt-[13px] pr-[31px] pl-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg transition-colors"
                     >
-                        <img src="/images/formkit_people.png" alt="People" />
+                        <img src={formkitPeople} alt="People" />
                     </div>
                     <div 
                         onClick={() => handleNavigation('calendar')}
                         className="pt-[13px] pr-[31px] pl-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg transition-colors"
                     >
-                        <img src="/images/simple-line-icons_calender.png" alt="Calendar" />
+                        <img src={simplelineicons} alt="Calendar" />
                     </div>
                     {/* Current page - Settings (highlighted) */}
                     <div className="w-[89px] pr-[31px] pl-[31px] bg-black h-[53px] pt-[13px] pb-[13px] rounded-[10px] border-[1.5px]">
-                        <img src="/images/setting-07.png" alt="Settings" />
+                        <img src={settings07} alt="Settings" />
                     </div>
                 </div>
                 
@@ -60,7 +73,7 @@ export default function Api() {
                         onClick={() => handleNavigation('signout')}
                         className="cursor-pointer hover:bg-gray-200 rounded-lg p-2 transition-colors"
                     >
-                        <img src="/images/lineback.png" alt="Back" />
+                        <img src={lineback} alt="Back" />
                     </div>
                 </div>
             </div> 
@@ -69,7 +82,7 @@ export default function Api() {
             <div className="w-[299px] h-full bg-[#EFEFEF] shadow-sm overflow-y-auto">
                 <div className="p-6">
                     <div className="flex items-center gap-3 mb-8">
-                        <img src="/images/ci_settings.png" alt="Settings Icon" className="w-[53px] h-[50px]"/>
+                        <img src={ciSettings} alt="Settings Icon" className="w-[53px] h-[50px]"/>
                         <h1 className="text-[48px] font-semibold text-[#4D4A4A]">Settings</h1>
                     </div>
 
@@ -78,7 +91,7 @@ export default function Api() {
                             onClick={() => handleSettingsNavigation('account')}
                             className="flex items-center gap-[10px] text-[#585858] p-[10px] hover:bg-gray-100 rounded-lg cursor-pointer transition-colors"
                         >
-                            <div><img src="/images/account-setting-02.png" alt="Account" /></div>
+                            <div><img src={accountSetting} alt="Account" /></div>
                             <span className="text-sm font-semibold">Edit Account</span>
                         </div>
                         
@@ -86,13 +99,13 @@ export default function Api() {
                             onClick={() => handleSettingsNavigation('tasks')}
                             className="flex items-center gap-[10px] rounded-[5px] text-[#585858] p-[10px] hover:bg-gray-100 rounded-lg cursor-pointer transition-colors"
                         >
-                            <div className="w-[20px] h-[20px]"><img src="/images/list-setting.png" alt="Tasks" /></div>
+                            <div className="w-[20px] h-[20px]"><img src={listSetting} alt="Tasks" /></div>
                             <span className="text-sm">Tasks</span>
                         </div>
                         
                         {/* Current section - API (highlighted) */}
                         <div className="flex items-center gap-[10px] bg-black rounded-[5px] text-white p-[10px] rounded-lg cursor-pointer">
-                            <div className="w-[20px] h-[20px]"><img src="/images/apiwhite.png" alt="API" /></div>
+                            <div className="w-[20px] h-[20px]"><img src={apiWhite} alt="API" /></div>
                             <span className="text-[20px] font-semibold">API</span>
                         </div>
                         
@@ -100,7 +113,7 @@ export default function Api() {
                             onClick={() => handleSettingsNavigation('about')}
                             className="flex items-center gap-[10px] rounded-[5px] text-[#585858] p-[10px] hover:bg-gray-100 rounded-lg cursor-pointer transition-colors"
                         >
-                            <div className="w-[20px] h-[20px]"><img src="/images/database-02.png" alt="About" /></div>
+                            <div className="w-[20px] h-[20px]"><img src={database02} alt="About" /></div>
                             <span className="text-sm">About Us</span>
                         </div>
                         
@@ -108,7 +121,7 @@ export default function Api() {
                             onClick={() => handleSettingsNavigation('faqs')}
                             className="flex items-center gap-[10px] rounded-[5px] text-[#585858] p-[10px] hover:bg-gray-100 rounded-lg cursor-pointer transition-colors"
                         >
-                            <div className="w-[20px] h-[20px]"><img src="/images/faq.png" alt="FAQs" /></div>
+                            <div className="w-[20px] h-[20px]"><img src={faq} alt="FAQs" /></div>
                             <span className="text-sm">FAQs</span>
                         </div>
                     </div>
