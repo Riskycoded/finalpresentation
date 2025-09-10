@@ -9,7 +9,7 @@ import simplelineicons from '../assets/simple-line-icons_calender.png';
 import settings07 from '../assets/setting-07.png';
 import linebackIcon from '../assets/lineback.png';
 import ciSettingsIcon from '../assets/ci_settings.png';
-import accountSettingIcon from '../assets/account-setting-02.png';
+import accountSettingIcon from '../assets/setting-07.png';
 import listSettingIcon from '../assets/list-setting.png';
 import secondSettingsIcon from '../assets/secondsettings.png';
 import databaseIcon from '../assets/database-02.png';

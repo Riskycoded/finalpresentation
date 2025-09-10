@@ -8,9 +8,9 @@ import simplelineicons from '../assets/simple-line-icons_calender.png';
 import settings07 from '../assets/setting-07.png';
 import lineback from '../assets/lineback.png';
 import ciSettings from '../assets/ci_settings.png';
-import accountSetting from '../assets/account-setting-02.png';
+import accountSetting from '../assets/setting-07.png';
 import listSetting from '../assets/list-setting.png';
-import apiWhite from '../assets/apiwhite.png';
+import apiWhite from '../assets/database-02.png';
 import database02 from '../assets/database-02.png';
 import faq from '../assets/faq.png';
 

@@ -18,7 +18,7 @@ import arrowLeft from '../assets/arrow-left.png';
 import arrowRight from '../assets/arrow-right.png';
 import dataana from '../assets/dataana.png';
 import image2 from '../assets/image2.png';
-import timeCircle from '../assets/time circle.png';
+import timeCircle from '../assets/Time Circle.png';
 import student from '../assets/student.png';
 import student2 from '../assets/student (2).png';
 import searchIcon from '../assets/search.png';
