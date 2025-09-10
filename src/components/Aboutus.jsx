@@ -11,7 +11,7 @@ import ciSettings from '../assets/ci_settings.png'
 import secondSettings from '../assets/secondsettings.png'
 import listSettings from '../assets/list-setting.png'
 import Set07 from '../assets/setting-07.png'
-import faQ from '../assets/faq.png'
+import faQ from '../assets/FAQ.png'
 import databaseWhite from '../assets/databasewhite.png'
 
 export default function Aboutus(){
