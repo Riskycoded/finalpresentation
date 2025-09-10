@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Notification from './Notification'; // Import your Notification component
+import Popupprofile from './Popupprofile'; // Import the ProfileDropdown component
 
 export default function Dashboard() {
     const navigate = useNavigate();
     const [currentTime, setCurrentTime] = useState(new Date());
     const [searchQuery, setSearchQuery] = useState("");
     const [showCreateTaskModal, setShowCreateTaskModal] = useState(false);
+    const [showNotifications, setShowNotifications] = useState(false); // Add notification state
+    const [showProfileDropdown, setShowProfileDropdown] = useState(false); // Add profile dropdown state
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [userTasks, setUserTasks] = useState([
         {
@@ -72,6 +76,7 @@ export default function Dashboard() {
 
     return (
         <div className="w-full min-h-screen bg-[#EAEAEA] flex relative">
+            {/* Sidebar - same as before */}
             <div className="bg-[#EFEFEF] w-[246px] px-6 min-h-screen opacity-100 rounded-tr-[24px] rounded-br-[24px] fixed top-0 left-0">
                 <div className="w-[109px] h-[114px]">
                     <img src="/images/logo.png" alt="" className="w-[109px] mt-[3px] ml-[2px] h-[114px]"/>
@@ -111,8 +116,9 @@ export default function Dashboard() {
                 </div>
             </div>
              
-            {/* Main Content Area */}
+            {/* Main Content Area - same as before */}
             <div className="ml-[246px] flex-1 min-h-screen bg-[#EAEAEA] p-4">
+                {/* All your existing main content goes here - keeping it the same */}
                 {/* Welcome Card */}
                 <div className="flex w-[459px] rounded-[10px] h-[207px] shadow-[0px_4px_4px_0px_#00000040] opacity-[81%] bg-white mb-[50px]">
                     <div className="w-[285px] h-[89px] mt-[52px] ml-[10px]">
@@ -193,7 +199,7 @@ export default function Dashboard() {
 
             {/* Right Panel */}
             <div className="w-[655px] min-h-screen bg-[#EAEAEA] p-4">
-                {/* Header with Search */}
+                {/* Header with Search - MODIFIED to include notification and profile toggles */}
                 <div className="w-full h-[56px] flex gap-[20px] mb-[14px]">
                     <div className="relative flex-1 max-w-md h-[56px] bg-[#F5F5F7] rounded-[10px]">
                         <span>
@@ -211,11 +217,48 @@ export default function Dashboard() {
                             className="w-full h-full pl-[50px] pr-[17px] pt-[14px] pb-[14px] bg-transparent border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>  
-                    <img src="/images/notification 1.png" alt="" className="w-[47px] h-[47px]"/>
-                    <img src="/images/smallprofile.png" alt="" className="w-[47px] h-[55px]" /> 
-                    <img src="/images/dropdown.png" alt="" className="w-[15px] h-[15.7px] mt-[23px]"/>
+                    
+                    {/* Notification icon */}
+                    <div className="relative">
+                        <img 
+                            src="/images/notification 1.png" 
+                            alt="Notifications" 
+                            className="w-[47px] h-[47px] cursor-pointer hover:opacity-80" 
+                            onClick={() => setShowNotifications(!showNotifications)}
+                        />
+                        
+                        {/* Notification Panel */}
+                        {showNotifications && (
+                            <div className="absolute top-[55px] right-0 z-50">
+                                <Notification onClose={() => setShowNotifications(false)} />
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Profile Section - UPDATED to include dropdown */}
+                    <div className="relative flex items-center">
+                        <div 
+                            className="flex items-center gap-2 cursor-pointer hover:opacity-80"
+                            onClick={() => setShowProfileDropdown(!showProfileDropdown)}
+                        >
+                            <img src="/images/smallprofile.png" alt="Profile" className="w-[47px] h-[55px]" />
+                            <img 
+                                src="/images/dropdown.png" 
+                                alt="Dropdown" 
+                                className={`w-[15px] h-[15.7px] transition-transform ${showProfileDropdown ? 'rotate-180' : ''}`}
+                            />
+                        </div>
+
+                        {/* Profile Dropdown */}
+                        {showProfileDropdown && (
+                            <div className="absolute top-[60px] right-0 z-50">
+                                <Popupprofile onClose={() => setShowProfileDropdown(false)} />
+                            </div>
+                        )}
+                    </div>
                 </div>
 
+                {/* Rest of your right panel content remains the same */}
                 {/* Create Task Card */}
                 <div 
                     onClick={() => setShowCreateTaskModal(true)}
@@ -339,21 +382,18 @@ export default function Dashboard() {
                 </div>
             </div>
 
-            {/* Create Task Modal - Positioned to show dashboard in background */}
+            {/* Create Task Modal - same as before */}
             {showCreateTaskModal && (
                 <div className="fixed inset-0 flex items-center justify-center z-50">
-                    {/* Semi-transparent backdrop that allows dashboard to show through */}
                     <div 
                         className="absolute inset-0 bg-black bg-opacity-20" 
                         onClick={() => setShowCreateTaskModal(false)}
                     ></div>
                     
-                    {/* Modal content */}
                     <div className="relative bg-white rounded-lg p-6 w-[500px] shadow-2xl">
                         <h2 className="text-2xl font-bold mb-4">Create New Task</h2>
                         <form onSubmit={(e) => {
                             e.preventDefault();
-                            // Add task logic here
                             setShowCreateTaskModal(false);
                         }}>
                             <div className="mb-4">
@@ -390,6 +430,17 @@ export default function Dashboard() {
                         </form>
                     </div>
                 </div>
+            )}
+
+            {/* Click outside to close dropdowns */}
+            {(showNotifications || showProfileDropdown) && (
+                <div 
+                    className="fixed inset-0 z-40" 
+                    onClick={() => {
+                        setShowNotifications(false);
+                        setShowProfileDropdown(false);
+                    }}
+                ></div>
             )}
         </div>
     );
