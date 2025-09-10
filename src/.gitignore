@@ -1,0 +1,46 @@
+# Environment variables
+.env
+.env.development
+.env.production
+.env.local
+.env.*.local
+
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# Vite build output
+dist/
+dist-ssr/
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Testing and coverage
+coverage/
+
+# Dependency lock files (optional, depending on your setup)
+# package-lock.json  # Include this if you use npm and don't want to commit lockfile
+# yarn.lock         # Include this if you use Yarn and don't want to commit lockfile
+
+# Miscellaneous
+*.orig
+*.bak
+*.tmp
