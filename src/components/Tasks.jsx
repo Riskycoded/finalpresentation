@@ -26,7 +26,7 @@ import c1Image from "../assets/c1.png";
 import contentWriImage from "../assets/contentwri.png";
 import creatingMobileImage from "../assets/creatingmobile.png";
 import progressImage from "../assets/Progress.png";
-import timeImage from "../assets/time_.png";
+import timeImage from "../assets/Time_.png";
 import productResImage from "../assets/productres.png";
 import fiftyPerImage from "../assets/50per.png";
 import dataAnnImage from "../assets/dataann.png";
