@@ -20,7 +20,7 @@ import ellipse236Image from '../assets/Ellipse 236.png';
 import ellipse237Image from '../assets/Ellipse 237.png';
 import addCircleIcon from '../assets/add-circle.png';
 import socialGroupIcon from '../assets/socialgroup.png';
-import menuBarImage from '/assets/menubarr.png'; // Updated to public/assets/
+import menuBarImage from '../assets/menubarr.png';
 import plusyIcon from '../assets/plusy.png';
 import greaterIcon from '../assets/greater.png';
 import callIcon from '../assets/call.png';
@@ -32,7 +32,6 @@ import camsendIcon from '../assets/camsend.png';
 import sendsendIcon from '../assets/sendsend.png';
 import cancelIcon from '../assets/cancel.png';
 import searchIcon from '../assets/search.png';
-import ellipseImage from '/assets/Ellipse.png'; // Added for logout background
 
 export default function Teams() {
     const navigate = useNavigate();
@@ -289,11 +288,7 @@ export default function Teams() {
                         <h1 className="font-semibold text-[18px] text-[#666666]">Settings</h1>
                     </div>
 
-                    <div 
-                        onClick={() => handleNavigation('signout')} 
-                        className="flex gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] mt-[30px] cursor-pointer hover:opacity-80" 
-                        style={{ backgroundImage: `url(${ellipseImage})` }}
-                    >
+                    <div onClick={() => handleNavigation('login')} className="flex bg-[url('/images/Ellipse.png')] gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] mt-[30px] cursor-pointer hover:opacity-80">
                         <img src={logoutIcon} alt="Log Out" />
                         <h1>Log Out</h1>
                     </div>
@@ -327,6 +322,7 @@ export default function Teams() {
                     </div>  
                 </div>
 
+                
                 <div className="mt-8 flex">
                     <div>
                         <div className=" -space-x-4 flex mb-8">
@@ -651,9 +647,11 @@ export default function Teams() {
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
+
         </div>
         );
 }
