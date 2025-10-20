@@ -18,7 +18,7 @@ import outOfOffice from '../assets/outofoffice.png';
 import ppux from '../assets/ppux.png';
 import checkGreen from '../assets/checkgreen.png';
 import cancelRed from '../assets/cancelred.png';
-import notification1 from '../assets/Notification 1.png';
+import notification1 from '../assets/Notification1.png';
 import yellowStuff from '../assets/yellowstuff.png';
 import emojil from '../assets/emojil.png';
 

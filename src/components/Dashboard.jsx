@@ -22,7 +22,7 @@ import timeCircle from '../assets/Time Circle.png';
 import student from '../assets/Student.png';
 import student2 from '../assets/Student (2).png';
 import searchIcon from '../assets/search.png';
-import notification1 from '../assets/notification 1.png';
+import notification1 from '../assets/Notification1.png';
 import smallprofile from '../assets/smallprofile.png';
 import dropdown from '../assets/dropdown.png';
 import frame from '../assets/Frame.png';
