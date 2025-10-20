@@ -18,7 +18,7 @@ import searchIcon from '../assets/search.png';
 import dataAnalysisImage from '../assets/dataanalysis.png';
 import malhubImage from '../assets/malhub.png';
 import webDevImage from '../assets/webdev.png';
-import menuBarImage from '../assets/menubarr.png';
+import menuBarImage from '../assets/Menubarr.png';
 import makaImage from '../assets/maka.png';
 import contentWritingImage from '../assets/contentwriting.png';
 
