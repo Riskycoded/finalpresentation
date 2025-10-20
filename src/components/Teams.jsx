@@ -1,5 +1,36 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logo from '../assets/logo.png';
+import whitehome from '../assets/whitehome.png';
+import tdesign_task from '../assets/tdesign_task.png';
+import formkit_people from '../assets/formkit_people.png';
+import simple_line_icons_calender from '../assets/simple-line-icons_calender.png';
+import setting_07 from '../assets/setting-07.png';
+import line_md_logout from '../assets/line-md_logout.png';
+import charlie from '../assets/charlie.png';
+import charmie from '../assets/charmie.png';
+import victoria from '../assets/victoria.png';
+import melanie from '../assets/melanie.png';
+import michael from '../assets/michael.png';
+import ellipse233 from '../assets/Ellipse 233.png';
+import ellipse234 from '../assets/Ellipse 234.png';
+import ellipse235 from '../assets/Ellipse 235.png';
+import ellipse236 from '../assets/Ellipse 236.png';
+import ellipse237 from '../assets/Ellipse 237.png';
+import add_circle from '../assets/add-circle.png';
+import socialgroup from '../assets/socialgroup.png';
+import menubarr from '../assets/Menubarr.png';
+import cancel from '../assets/cancel.png';
+import plusy from '../assets/plusy.png';
+import greater from '../assets/greater.png';
+import call from '../assets/call.png';
+import video from '../assets/video.png';
+import docsend from '../assets/docsend.png';
+import picsend from '../assets/picsend.png';
+import emojis from '../assets/emojis.png';
+import camsend from '../assets/camsend.png';
+import sendsend from '../assets/sendsend.png';
+import search from '../assets/search.png';
 
 export default function Teams() {
     const navigate = useNavigate();
@@ -10,25 +41,25 @@ export default function Teams() {
         {
             id: 1,
             name: "Chris Morich",
-            avatar: "/images/charlie.png",
+            avatar: charlie,
             lastMessage: "Hi Angelina! How are You?",
         },
         {
             id: 2,
             name: "Charmie",
-            avatar: "/images/charmie.png",
+            avatar: charmie,
             lastMessage: "Do you need that design?",
         },
         {
             id: 3,
             name: "Victoria Mandala",
-            avatar: "/images/victoria.png",
+            avatar: victoria,
             lastMessage: "What is the price of hourly...",
         },
         {
             id: 4,
             name: "Melanie Chu",
-            avatar: "/images/melanie.png",
+            avatar: melanie,
             lastMessage: "Awesome Design!!",
         }
     ]);
@@ -36,7 +67,7 @@ export default function Teams() {
         {
             id: 1,
             sender: "Chris Morich",
-            avatar: "/images/charlie.png",
+            avatar: charlie,
             message: "Hi! Everyone, What's the update about the design",
             time: "12:30pm",
             type: "received"
@@ -44,7 +75,7 @@ export default function Teams() {
         {
             id: 2,
             sender: "Me",
-            avatar: "/images/michael.png",
+            avatar: michael,
             message: "Hi Chris, Hi Cris, Im working on the variables and components",
             time: "12:45pm",
             type: "sent"
@@ -52,7 +83,7 @@ export default function Teams() {
         {
             id: 3,
             sender: "Charmie",
-            avatar: "/images/charmie.png",
+            avatar: charmie,
             message: "Thats good. Jay keep it up",
             time: "12:46pm",
             type: "received"
@@ -60,7 +91,7 @@ export default function Teams() {
         {
             id: 4,
             sender: "Me",
-            avatar: "/images/michael.png",
+            avatar: michael,
             message: "Don't forget to put the deadline on calendar for easy reminder need.",
             time: "1:05pm",
             type: "sent"
@@ -68,7 +99,7 @@ export default function Teams() {
         {
             id: 5,
             sender: "Charmie",
-            avatar: "/images/charmie.png",
+            avatar: charmie,
             message: "Doing that right away and im done with styles.",
             time: "1:10pm",
             type: "received"
@@ -76,7 +107,7 @@ export default function Teams() {
         {
             id: 6,
             sender: "Chris Morich",
-            avatar: "/images/charlie.png",
+            avatar: charlie,
             message: "Okay everyone, keep me updated.",
             time: "1:56pm",
             type: "received"
@@ -88,8 +119,8 @@ export default function Teams() {
     const [showCreateGroup, setShowCreateGroup] = useState(false);
     const [newGroupName, setNewGroupName] = useState("");
     const [collaborators, setCollaborators] = useState([
-        { id: 1, name: "Angela", avatar: "/images/charlie.png" },
-        { id: 2, name: "Charmie", avatar: "/images/charmie.png" }
+        { id: 1, name: "Angela", avatar: charlie },
+        { id: 2, name: "Charmie", avatar: charmie }
     ]);
     const [groups, setGroups] = useState([
         {
@@ -226,38 +257,38 @@ export default function Teams() {
             {/* Sidebar */}
             <div className="bg-[#EFEFEF] w-[246px] px-6 min-h-screen opacity-100 rounded-tr-[24px] rounded-br-[24px] fixed top-0 left-0">
                 <div className="w-[109px] h-[114px]">
-                    <img src="/images/logo.png" alt="" className="w-[109px] mt-[3px] ml-[2px] h-[114px]"/>
+                    <img src={logo} alt="" className="w-[109px] mt-[3px] ml-[2px] h-[114px]"/>
                     <h1 className="w-[76px] h-[26px] text-[20px] font-[jaini]">CheckMate</h1>
                 </div>
                     
                 <div className="gap-[5px] mt-[30px]">
                     <div onClick={() => handleNavigation('dashboard')} className="flex gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg">
-                        <img src="/images/whitehome.png" alt="" />
+                        <img src={whitehome} alt="" />
                         <h1 className="text-[#666666] text-[20px] font-semibold text-center">Dashboard</h1>
                     </div>
 
                     <div onClick={() => handleNavigation('tasks')} className="flex gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg">
-                        <img src="/images/tdesign_task.png" alt="" />
+                        <img src={tdesign_task} alt="" />
                         <h1 className="font-semibold text-[18px] text-[#666666]">Tasks Board</h1>
                     </div>
 
                     <div className="flex gap-[10px] shadow-[0px_4px_4px_0px_#00000060] w-[195px] h-[53px] rounded-[10px] bg-black border-[1.5px] pl-[31px] pt-[13px] pr-[31px] pb-[13px]">
-                        <img src="/images/formkit_people.png" alt="" />
+                        <img src={formkit_people} alt="" />
                         <h1 className="font-semibold text-[18px] text-white">Teams</h1>
                     </div>
                 
                     <div onClick={() => handleNavigation('calendar')} className="flex gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg">
-                        <img src="/images/simple-line-icons_calender.png" alt="" />
+                        <img src={simple_line_icons_calender} alt="" />
                         <h1 className="font-semibold text-[18px] text-[#666666]">Calendar</h1>
                     </div>
                 
                     <div onClick={() => handleNavigation('settings')} className="flex gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] cursor-pointer hover:bg-gray-200 rounded-lg">
-                        <img src="/images/setting-07.png" alt="" />
+                        <img src={setting_07} alt="" />
                         <h1 className="font-semibold text-[18px] text-[#666666]">Settings</h1>
                     </div>
 
                     <div onClick={() => handleNavigation('login')} className="flex bg-[url('/images/Ellipse.png')] gap-[10px] pl-[31px] pt-[13px] pr-[31px] pb-[13px] mt-[30px] cursor-pointer hover:opacity-80">
-                        <img src="/images/line-md_logout.png" alt="" />
+                        <img src={line_md_logout} alt="" />
                         <h1>Log Out</h1>
                     </div>
                 </div>
@@ -268,14 +299,14 @@ export default function Teams() {
                 {/* Header Section */}
                 <div className="flex justify-between items-center mb-8">
                     <div className="flex items-center gap-[19px]">
-                        <img src="/images/formkit_people.png" alt="" className="w-[38px] pt-[7px] h-[46px]"/>
+                        <img src={formkit_people} alt="" className="w-[38px] pt-[7px] h-[46px]"/>
                         <h1 className="font-semibold text-[60px]">Teams</h1>
                     </div>
 
                     <div className="relative flex-1 max-w-md h-[56px] bg-[#F5F5F7] rounded-[10px] ml-6">
                         <span>
                             <img 
-                                src="/images/search.png" 
+                                src={search} 
                                 alt="Search" 
                                 className="absolute left-[17px] top-1/2 -translate-y-1/2 h-[27.51px] w-auto"
                             />
@@ -294,12 +325,12 @@ export default function Teams() {
                 <div className="mt-8 flex">
                     <div>
                         <div className=" -space-x-4 flex mb-8">
-                            <img src="/images/Ellipse 233.png" alt="" className="w-[50px] h-[50px]"/>
-                            <img src="/images/Ellipse 234.png" alt="" className="w-[50px] h-[50px]"/>
-                            <img src="/images/Ellipse 235.png" alt="" className="w-[50px] h-[50px]"/>
-                            <img src="/images/Ellipse 236.png" alt="" className="w-[50px] h-[50px]"/>
-                            <img src="/images/Ellipse 237.png" alt="" className="w-[50px] h-[50px]"/>
-                            <img src="/images/add-circle.png" alt="" className="w-[50px] h-[50px]"/>
+                            <img src={ellipse233} alt="" className="w-[50px] h-[50px]"/>
+                            <img src={ellipse234} alt="" className="w-[50px] h-[50px]"/>
+                            <img src={ellipse235} alt="" className="w-[50px] h-[50px]"/>
+                            <img src={ellipse236} alt="" className="w-[50px] h-[50px]"/>
+                            <img src={ellipse237} alt="" className="w-[50px] h-[50px]"/>
+                            <img src={add_circle} alt="" className="w-[50px] h-[50px]"/>
                         </div>
 
                         <div className="gap-4 space-y-[15px]">
@@ -370,7 +401,7 @@ export default function Teams() {
                                     className={`bg-[${selectedChat === group.id ? '#323232' : '#4A4A4A'}] rounded-[10px] gap-[15px] w-[320px] flex flex-row h-[70px] cursor-pointer bg-[#323232] transition-colors mb-4`}
                                 >
                                     <div className="my-auto" >
-                                        <img src="/images/socialgroup.png" alt="" className="my-auto"/>
+                                        <img src={socialgroup} alt="" className="my-auto"/>
                                     </div>
 
                                     <div className="text-white gap-[1px] my-auto">
@@ -390,7 +421,7 @@ export default function Teams() {
                                 </div>
 
                                 <div className="mt-[18px]">
-                                    <img src="/images/menubarr.png" alt="" className="cursor-pointer"/>
+                                    <img src={menubarr} alt="" className="cursor-pointer"/>
                                 </div>
                                 
                             </div>
@@ -420,7 +451,7 @@ export default function Teams() {
                                             <img src={collaborator.avatar} alt="" className="w-[25px] h-[25px] rounded-full"/>
                                             <p className="text-[13px] font-medium">{collaborator.name}</p>
                                             <img 
-                                                src="/images/cancel.png" 
+                                                src={cancel} 
                                                 alt="" 
                                                 className="w-[15px] h-[15px] cursor-pointer"
                                                 onClick={() => handleRemoveCollaborator(collaborator.id)}
@@ -429,7 +460,7 @@ export default function Teams() {
                                     ))}
 
                                     <div className="w-[40px] h-[40px] rounded-full flex items-center justify-center cursor-pointer">
-                                        <img src="/images/plusy.png" alt="" className="w-[35px] h-[35px]"/>
+                                        <img src={plusy} alt="" className="w-[35px] h-[35px]"/>
                                     </div>
 
                                     {showCreateGroup && (
@@ -437,7 +468,7 @@ export default function Teams() {
                                             className="w-[40px] h-[40px] rounded-full flex items-center justify-center cursor-pointer"
                                             onClick={handleCreateGroup}
                                         >
-                                            <img src="/images/greater.png" alt="" className="w-[35px] h-[35px]"/>
+                                            <img src={greater} alt="" className="w-[35px] h-[35px]"/>
                                         </div>
                                     )}
                                 </div>
@@ -452,7 +483,7 @@ export default function Teams() {
                     <div>
                         <div className="flex w-[751px] h-[87px] gap-[21px] p-[10px] bg-[#FFFFFF] rounded-[15px]">
                             <div>
-                                <img src="/images/socialgroup.png" alt="" className="w-[67px] border-0.5 h-[67px]"/>
+                                <img src={socialgroup} alt="" className="w-[67px] border-0.5 h-[67px]"/>
                             </div>
 
                             <div>
@@ -475,8 +506,8 @@ export default function Teams() {
                             </div>
 
                             <div className="pl-[111px] p h-[52px] margin-left: auto gap-[5px] flex items-end justify-end">
-                                <img src="/images/call.png" alt="" className="w-[60px] h-[52px]"/>
-                                <img src="/images/video.png" alt="" className="w-[60px] h-[52px]"/>
+                                <img src={call} alt="" className="w-[60px] h-[52px]"/>
+                                <img src={video} alt="" className="w-[60px] h-[52px]"/>
                             </div>
 
                         </div>
@@ -497,7 +528,7 @@ export default function Teams() {
                                                         <p className="text-[16px] my-auto font-semibold">{msg.message}</p>
                                                     </div>
                                                     <div className="my-center">
-                                                        <img src="/images/michael.png" alt="" className="w-[80px] h-[50px]" />
+                                                        <img src={michael} alt="" className="w-[80px] h-[50px]" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -531,7 +562,7 @@ export default function Teams() {
                                                         <p className="text-[16px] my-auto font-semibold">{msg.message}</p>
                                                     </div>
                                                     <div className="my-center">
-                                                        <img src="/images/michael.png" alt="" className="w-[80px] h-[50px]" />
+                                                        <img src={michael} alt="" className="w-[80px] h-[50px]" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -581,7 +612,7 @@ export default function Teams() {
                                                 handleSendMessage(`📎 Attached: ${file.name}`);
                                             }
                                         }}/>
-                                        <img src="/images/docsend.png" alt="" className="w-[44px] h-[44px]"/>
+                                        <img src={docsend} alt="" className="w-[44px] h-[44px]"/>
                                     </label>
                                     <label className="cursor-pointer hover:opacity-80">
                                         <input type="file" accept="image/*" className="hidden" onChange={(e) => {
@@ -590,16 +621,16 @@ export default function Teams() {
                                                 handleSendMessage(`🖼️ Image: ${file.name}`);
                                             }
                                         }}/>
-                                        <img src="/images/picsend.png" alt="" className="w-[44px] h-[44px]"/>
+                                        <img src={picsend} alt="" className="w-[44px] h-[44px]"/>
                                     </label>
                                     <img 
-                                        src="/images/emojis.png" 
+                                        src={emojis} 
                                         alt="" 
                                         onClick={() => setShowEmojiPicker(!showEmojiPicker)}
                                         className="cursor-pointer hover:opacity-80 w-[44px] h-[44px]"
                                     />
                                     <img 
-                                        src="/images/camsend.png" 
+                                        src={camsend} 
                                         alt="" 
                                         className="cursor-pointer hover:opacity-80 w-[44px] h-[44px]"
                                         onClick={() => {
@@ -608,7 +639,7 @@ export default function Teams() {
                                         }}
                                     />
                                     <img 
-                                        src="/images/sendsend.png" 
+                                        src={sendsend} 
                                         alt="" 
                                         onClick={() => handleSendMessage(newMessage)}
                                         className="cursor-pointer hover:opacity-80 w-[44px] h-[44px]"

@@ -227,7 +227,7 @@ export default function Tasks() {
   return (
     <div className="w-full min-h-screen bg-[#EAEAEA] flex h-full">
       {/* Sidebar */}
-      <div className="bg-[#EFEFEF] w-[246px] px-6 h-full min-h-screen opacity-100 rounded-tr-[24px] rounded-br-[24px] fixed top-0 left-0">
+      <div className="bg-[#EFEFEF] w-[246px] px-6 h-full min-h-screen opacity-100 rounded-tr-[24px] rounded-br-[24px] fixed top-0 left-0 transition-transform duration-300 ease-in-out md:translate-x-0 sm:translate-x-[-100%] sm:z-50">
         <div className="w-[109px] h-[114px]">
           <img
             src={logoImage}
@@ -296,24 +296,24 @@ export default function Tasks() {
       </div>
 
       {/* Main Content Area */}
-      <div className="ml-[246px] flex-1 p-4 min-h-screen bg-[#EAEAEA]">
+      <div className="transition-all duration-300 ml-0 md:ml-[246px] flex-1 p-4 min-h-screen bg-[#EAEAEA]">
         {/* Header Section */}
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
           <div className="flex items-center gap-[15px]">
             <img
               src={vectorIcon}
               alt="Tasks Icon"
-              className="w-[38px] h-[48px]"
+              className="w-[30px] sm:w-[38px] h-[40px] sm:h-[48px]"
             />
-            <h1 className="font-semibold text-[48px]">Tasks</h1>
+            <h1 className="font-semibold text-[32px] sm:text-[48px]">Tasks</h1>
           </div>
 
-          <div className="relative flex-1 max-w-md h-[56px] bg-[#F5F5F7] rounded-[10px] ml-6">
+          <div className="relative flex-1 w-full sm:max-w-md h-[56px] bg-[#F5F5F7] rounded-[10px] sm:ml-6">
             <span>
               <img
                 src={searchIcon}
                 alt="Search"
-                className="absolute left-[17px] top-1/2 -translate-y-1/2 h-[27.51px] w-auto"
+                className="absolute left-[17px] top-1/2 -translate-y-1/2 h-[24px] sm:h-[27.51px] w-auto"
               />
             </span>
             <input
@@ -327,10 +327,10 @@ export default function Tasks() {
         </div>
 
         {/* Content Area */}
-        <div className="flex gap-3 px-2">
+        <div className="flex flex-col lg:flex-row gap-3 px-2 overflow-x-auto">
           {/* To-do Column */}
           <div
-            className="flex-1 min-w-0 px-3 py-2 bg-gray-50/30 rounded-lg"
+            className="flex-1 min-w-[300px] lg:min-w-0 px-3 py-2 bg-gray-50/30 rounded-lg"
             onDragOver={handleDragOver}
             onDrop={() => handleDrop("todo")}
           >
@@ -355,7 +355,7 @@ export default function Tasks() {
           </div>
 
           <div
-            className="flex-1 min-w-0 px-3 py-2 bg-gray-50/30 rounded-lg"
+            className="flex-1 min-w-[300px] lg:min-w-0 px-3 py-2 bg-gray-50/30 rounded-lg mt-4 lg:mt-0"
             onDragOver={handleDragOver}
             onDrop={() => handleDrop("inProgress")}
           >
@@ -384,7 +384,7 @@ export default function Tasks() {
           </div>
 
           <div
-            className="flex-1 min-w-0 px-3 py-2 bg-gray-50/30 rounded-lg"
+            className="flex-1 min-w-[300px] lg:min-w-0 px-3 py-2 bg-gray-50/30 rounded-lg mt-4 lg:mt-0"
             onDragOver={handleDragOver}
             onDrop={() => handleDrop("review")}
           >
@@ -408,7 +408,7 @@ export default function Tasks() {
           </div>
 
           <div
-            className="flex-1 min-w-0 px-3 py-2 bg-gray-50/30 rounded-lg"
+            className="flex-1 min-w-[300px] lg:min-w-0 px-3 py-2 bg-gray-50/30 rounded-lg mt-4 lg:mt-0"
             onDragOver={handleDragOver}
             onDrop={() => handleDrop("completed")}
           >
